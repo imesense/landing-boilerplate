@@ -1,0 +1,15 @@
+// COLORS
+$color-primary: #ffb900;
+$color-secondary: #105def;
+$color-secondary-dark: darken($color-secondary, 5%);
+$color-secondary-darker: darken($color-secondary, 10%);
+$color-secondary-light: lighten($color-secondary, 5%);
+$color-secondary-lighter: lighten($color-secondary, 10%);
+$color-third: #d3d3d3;
+$color-fourth: #454545;
+
+// FONTS
+$font-family: 'Gilroy', 'Tahoma', 'Arial', sans-serif;
+$font-family-secondary: 'Gotham Pro', $font-family;
+$font-size: 18px;
+$font-weight: 400;

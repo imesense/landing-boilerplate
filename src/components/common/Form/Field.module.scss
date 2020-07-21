@@ -1,0 +1,15 @@
+@import 'vars';
+@import 'mixins';
+
+.Field {
+  border: none;
+  background: #EDEDED;
+  color: $color-fourth;
+  font-size: rem(27);
+  text-align: left;
+  padding: rem(12) rem(40);
+  border-radius: 27px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: rem(18);
+}
