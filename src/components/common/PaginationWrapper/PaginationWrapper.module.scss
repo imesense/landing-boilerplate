@@ -1,0 +1,55 @@
+@import 'mixins';
+
+.root {
+  font-size: rem(18);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: bold;
+  background: $color-secondary;
+  border-radius: 10px;
+  margin: 0 5px;
+  line-height: 1;
+  min-width: 40px;
+  transition: all 0.15s ease-in-out;
+
+  &_active, &:hover {
+    background: $color-primary;
+  }
+
+  &_break {
+    background: none;
+
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  display: inline-block;
+  padding: rem(12);
+
+  &, &:visited, &:focus, &:active {
+    color: $color-back;
+  }
+
+  &_active {
+    &, &:visited, &:focus, &:active {
+      color: $color-secondary;
+    }
+  }
+
+  &_break {
+    &, &:visited, &:focus, &:active {
+      color: $color-secondary;
+    }
+  }
+}
