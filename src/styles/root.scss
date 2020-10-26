@@ -20,6 +20,16 @@ html, body {
   }
 }
 
+/**
+ * Firefox specific rule
+ */
+ @-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+    font-style: normal;
+  }
+}
+
 a, a:visited {
   color: $color-secondary;
 
