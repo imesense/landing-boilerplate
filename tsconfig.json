@@ -21,7 +21,8 @@
     "paths": {
       "pages/*": ["./pages/*"],
       "components/*": ["src/components/*"],
-      "utils/*": ["src/utils/*"]
+      "utils/*": ["src/utils/*"],
+      "data/*": ["src/data/*"]
     }
   },
   "exclude": [
