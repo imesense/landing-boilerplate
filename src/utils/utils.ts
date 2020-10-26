@@ -1,4 +1,5 @@
-import pick from 'lodash/pick';
+import padStart from 'lodash-es/padStart';
+import pick from 'lodash-es/pick';
 
 export default class Utils {
   static DEVICE_WIDTHS = {
@@ -20,5 +21,19 @@ export default class Utils {
     }
 
     return data;
+  }
+
+  static formatDate(date: string | Date, format: 'dd.mm.yyyy'): string {
+    const currentDate = typeof date === 'string' ? new Date(date) : date;
+
+    if (format === 'dd.mm.yyyy') {
+      return `${
+        padStart(currentDate.getDate().toString(), 2, '0')
+      }.${
+        padStart((currentDate.getMonth() + 1).toString(), 2, '0')
+      }.${
+        currentDate.getFullYear().toString()
+      }`;
+    }
   }
 }
