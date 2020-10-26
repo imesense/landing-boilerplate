@@ -1,0 +1,18 @@
+@import 'mixins';
+
+.root {
+  text-align: left;
+  font-size: rem(20);
+}
+
+.link {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &, &:visited {
+    color: $color-main;
+  }
+}
