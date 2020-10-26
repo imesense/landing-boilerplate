@@ -1,0 +1,28 @@
+@import 'mixins';
+
+@keyframes dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.root {
+  display: inline-block;
+  width: rem(80);
+  height: rem(80);
+
+  &::after {
+    content: '';
+    display: block;
+    width: rem(64);
+    height: rem(64);
+    margin: rem(8);
+    border-radius: 50%;
+    border: rem(6) solid $color-main;
+    border-color: $color-main transparent $color-main transparent;
+    animation: dual-ring 1.2s linear infinite;
+  }
+}
