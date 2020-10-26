@@ -5,6 +5,7 @@ interface ColProps {
   t?: number;
   s?: number;
   className?: string;
+  reactKey?: number;
 }
 
 export default class Col extends React.Component<ColProps> {
@@ -14,6 +15,7 @@ export default class Col extends React.Component<ColProps> {
   }
 
   render() {
-    return <div className={this.getClass()}>{this.props.children}</div>;
+    const { reactKey, children } = this.props;
+    return <div className={this.getClass()} key={reactKey}>{children}</div>;
   }
 }
