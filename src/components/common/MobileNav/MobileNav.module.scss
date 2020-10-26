@@ -1,0 +1,78 @@
+@import 'mixins';
+
+.menu-button {
+  width: rem(36);
+  height: rem(36);
+  background: url('/images/menu.svg') center center no-repeat;
+  background-size: contain;
+  position: fixed;
+  z-index: 2;
+  top: rem(16);
+  right: rem(16);
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+
+  &_visible {
+    z-index: 2;
+    opacity: 1;
+  }
+}
+
+.root {
+  background: $color-secondary;
+  color: $color-back;
+  width: 50vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease-in;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 450px) {
+    width: 65vw;
+  }
+
+  &_visible {
+    transform: translateX(0);
+  }
+}
+
+.close {
+  width: rem(24);
+  height: rem(24);
+  background: url('/images/close.svg') center center no-repeat;
+  background-size: contain;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  margin: rem(16) rem(16) 0 auto;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.links {
+  margin-top: 10vh;
+}
