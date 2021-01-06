@@ -7,7 +7,7 @@ interface PolicyModalProps {
   onClose: () => void;
 }
 
-export default class PolicyModal extends Component<PolicyModalProps> {
+export class PolicyModal extends Component<PolicyModalProps> {
   private static readonly POLICY_DATA = {
     lastChange: '',
     orgName: '',

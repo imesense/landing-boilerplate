@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import PolicyModal from './PolicyModal';
+import { PolicyModal } from './PolicyModal';
 
 interface PolicyLinkProps {
   className?: string;
@@ -9,7 +9,7 @@ interface PolicyLinkState {
   isModalVisible: boolean;
 }
 
-export default class PolicyLink extends Component<PolicyLinkProps, PolicyLinkState> {
+export class PolicyLink extends Component<PolicyLinkProps, PolicyLinkState> {
   private closeModal = () => {
     this.setState({ isModalVisible: false });
   };
