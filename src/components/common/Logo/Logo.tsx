@@ -7,11 +7,9 @@ interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ width, height, alt, className }: LogoProps) {
-  return (
-    <span 
-      className={`${styles.Logo} ${alt ? styles.Logo_alt : ''} ${className || ''}`.trim()} 
-      style={{ width, height }} 
-    />
-  );
-}
+export const Logo = ({ width, height, alt, className }: LogoProps) => (
+  <span 
+    className={`${styles.Logo} ${alt ? styles.Logo_alt : ''} ${className || ''}`.trim()} 
+    style={{ width, height }} 
+  />
+);
