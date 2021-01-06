@@ -1,4 +1,2 @@
-import Button from './Button';
-import CallbackButton from './CallbackButton';
-
-export { Button, CallbackButton };
+export { Button } from './Button';
+export { CallbackButton } from './CallbackButton';
