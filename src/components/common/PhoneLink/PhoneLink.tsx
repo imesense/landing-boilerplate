@@ -11,7 +11,7 @@ interface PhoneLinkState {
   isModalVisible: boolean;
 }
 
-export default class PhoneLink extends Component<PhoneLinkProps, PhoneLinkState> {
+export class PhoneLink extends Component<PhoneLinkProps, PhoneLinkState> {
   private onClick: DOMAttributes<HTMLAnchorElement>['onClick'] = e => {
     if (Utils.getScreenWidth() > Utils.DEVICE_WIDTHS.PHONE) {
       e.preventDefault();
