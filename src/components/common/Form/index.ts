@@ -1,4 +1,3 @@
-import Form from './Form';
-import Field from './Field';
-
-export { Form, Field };
+export { Form } from './Form';
+export { Field } from './Field/Field';
+export { FileUpload } from './FileUpload/FileUpload';

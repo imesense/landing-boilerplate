@@ -12,7 +12,7 @@ interface FieldProps {
   onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
-export default function Field({ type, placeholder, name, className, rows, value, onChange }: FieldProps) {
+export const Field = ({ type, placeholder, name, className, rows, value, onChange }: FieldProps) => {
   const restProps = {
     className: `${styles.Field} ${className || ''}`.trim(),
     required: true,
