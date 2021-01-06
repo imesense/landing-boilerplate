@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Button from './Button';
+import { Button } from './Button';
 import { CallbackModal } from 'components/common/Modal';
 
 interface CallbackButtonProps {
@@ -12,7 +12,7 @@ interface CallbackButtonState {
   isModalVisible: boolean;
 }
 
-export default class CallbackButton extends Component<CallbackButtonProps, CallbackButtonState> {
+export class CallbackButton extends Component<CallbackButtonProps, CallbackButtonState> {
   private openModal = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     this.setState({ isModalVisible: true });
     e.preventDefault();
