@@ -8,6 +8,7 @@ export { ModalLink } from './ModalLink/ModalLink';
 export { PaginationWrapper } from './PaginationWrapper/PaginationWrapper';
 export { Preloader } from './Preloader/Preloader';
 export { withRevealWrapper } from './RevealWrapper/RevealWrapper';
+export { RouteLink } from './RouteLink/RouteLink';
 
 export * from './Form';
 export * from './Slider';
