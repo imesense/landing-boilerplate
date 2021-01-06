@@ -87,4 +87,9 @@ $m->From($project_name . ";noreply@" . $_SERVER['SERVER_NAME']);
 $m->To( $admin_email );
 $m->Subject( $letter_type . " | " . $project_name_for_title );
 $m->Body( $message, "html" );
+
+if (isset($_FILES['file'])) {
+    $m->Attach($_FILES['file']['tmp_name'], $_FILES['file']['name']);
+}
+
 $m->Send();
