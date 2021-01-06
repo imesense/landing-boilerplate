@@ -3,10 +3,10 @@ include "libmail.php"; // Include mail send class
 
 error_reporting(E_ALL); // All of errors will be post in error.log
 
-$project_name = 'github.com'; // This will display in sender
-$admin_email = 'target@mail.com'; // Target email
-$letter_type = 'New request';
-$project_name_for_title = 'Project';
+$project_name = 'github.com'; // TO CHANGE: This will display in sender
+$admin_email = 'target@mail.com'; // TO CHANGE: Target email
+$letter_type = 'New request'; // TO CHANGE: Type (topic) of letter
+$project_name_for_title = 'Project'; // TO CHANGE: Name of project (site)
 
 function foreachFields($array) {
     $c = true; // This is for alternating background of rows

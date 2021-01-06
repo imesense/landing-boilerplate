@@ -1,30 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Landing boilerplate
 
-## Getting Started
+Landing boilerplate for fast builds of landing pages and simple sites with reusable parts based on Next.js, Typescript and Sass
 
-First, run the development server:
+## Recommendations
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Use yarn for stable dev process.
+- Before start of dev change remote origin.
+## Parts of project
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `public/mail` - scripts for send e-mail messages via PHP:
+  - `libmail.php` - class for configure of e-mail message;
+  - `mail-callback.php` - script of send e-mail message to target e-mail, change marked for change content before production;
+- `resources` - folder for any resources of project;
+- `scripts` - scripts for local actions or build/compile;
+- `src`:
+  - `components` - all components of project;
+    - `common` - common components for all projects that based on this boilerplate;
+    - `layout` - themed sections (parts) of landing page;
+    - `theme` - themed common components for landing page;
+  - `pages` - pages of site (if project has only one page, keep `index.tsx` without changes);
+  - `styles` - common SCSS styles;
+  - `utils` - any TypeScript utils.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Commands
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `yarn dev` - Start dev server on `http://localhost:3000/`.
+- `yarn build` - Create production build.
+- `yarn build:export` - Create production build and place it in folder `out`.
+- `yarn start` - Start production server (for server-side rendering sites).
+- `yarn rebuild` - Rebuild all dependencies.
+- `yarn favicons` - Create favicons of all sizes (before use script place original favicon with size 192 and larger in `./public/images/favicons/base.png`).
