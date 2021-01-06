@@ -9,6 +9,7 @@ export { PaginationWrapper } from './PaginationWrapper/PaginationWrapper';
 export { Preloader } from './Preloader/Preloader';
 export { withRevealWrapper } from './RevealWrapper/RevealWrapper';
 export { RouteLink } from './RouteLink/RouteLink';
+export { Up } from './Up/Up';
 
 export * from './Form';
 export * from './Slider';
