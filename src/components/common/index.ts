@@ -6,6 +6,7 @@ export { PhoneLink } from './PhoneLink/PhoneLink';
 export { MobileNav } from './MobileNav/MobileNav';
 export { ModalLink } from './ModalLink/ModalLink';
 export { PaginationWrapper } from './PaginationWrapper/PaginationWrapper';
+export { Preloader } from './Preloader/Preloader';
 
 export * from './Form';
 export * from './Slider';
