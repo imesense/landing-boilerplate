@@ -1,0 +1,35 @@
+@import 'mixins';
+
+.root {
+  border: 1px dashed #979797;
+  border-radius: 5px;
+  width: 100%;
+  color: #979797;
+  padding: rem(14);
+  display: flex;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  position: relative;
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &_error {
+    color: $color-secondary;
+    border-color: $color-secondary;
+  }
+}
+
+.clear {
+  width: rem(12);
+  height: rem(12);
+  background: url('/images/close.svg');
+  background-size: contain;
+  opacity: 0.4;
+  position: absolute;
+  right: rem(13);
+  top: 39%;
+}
