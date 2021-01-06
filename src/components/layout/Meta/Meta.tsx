@@ -39,15 +39,31 @@ export function Meta() {
       <meta httpEquiv="Cache-Control" content="max-age=86400, must-revalidate" />
       {
         appleTouchSizes.map(
-          size => <link rel="apple-touch-icon" sizes={`${size}x${size}`} href={`/images/favicons/${size}.png`} />
+          (size, i) => (
+            <link 
+              key={i} 
+              rel="apple-touch-icon" 
+              sizes={`${size}x${size}`} 
+              href={`/images/favicons/${size}.png`} 
+            />
+          )
         )
       }
       {
         faviconSizes.map(
-          size => <link rel="icon" type="image/png" sizes={`${size}x${size}`} href={`/images/favicons/${size}.png`} />
+          (size, i) => (
+            <link 
+              key={i}
+              rel="icon" 
+              type="image/png" 
+              sizes={`${size}x${size}`} 
+              href={`/images/favicons/${size}.png`} 
+            />
+          )
         )
       }
       <meta name="msapplication-TileImage" content="images/favicons/144.png" />
+      <meta name="yandex-verification" content="aa8147f4e34cbde3" />
     </>
   );
 }
