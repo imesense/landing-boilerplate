@@ -11,7 +11,7 @@ interface SectionProps {
   id?: string;
 }
 
-export default class Section extends React.Component<SectionProps> {
+export class Section extends React.Component<SectionProps> {
   static defaultProps: SectionProps = { isContFlex: true };
   
   render() {
