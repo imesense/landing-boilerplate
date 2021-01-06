@@ -2,6 +2,8 @@
 
 Landing boilerplate for fast builds of landing pages and simple sites with reusable parts based on Next.js, Typescript and Sass
 
+## Current version - 0.1.0
+
 ## Recommendations
 
 - Use yarn for stable dev process.
