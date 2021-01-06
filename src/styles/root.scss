@@ -20,11 +20,19 @@ html, body {
   }
 }
 
-a, a:visited {
-  color: $color-secondary;
+/**
+ * Firefox specific rule
+ */
+ @-moz-document url-prefix() {
+  body {
+    font-weight: lighter !important;
+    font-style: normal;
+  }
+}
 
-  &:active, &:focus {
-      color: $color-secondary;
+a {
+  &, &:visited, &:active, &:focus {
+    color: $link-color;
   }
 }
 
