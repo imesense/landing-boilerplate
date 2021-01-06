@@ -1,7 +1,6 @@
 import { Form, Field, Modal } from 'components/common';
 import { Component, ChangeEvent } from 'react';
 import Utils from 'utils/utils';
-import styles from './CallbackModal.module.scss';
 
 interface CallbackModalProps {
   visible: boolean;
@@ -44,8 +43,6 @@ export class CallbackModal extends Component<CallbackModalProps, CallbackModalSt
           formValue={this.getFormValue()}
           afterSuccessSubmit={this.onSubmit}
           formTarget={this.props.formTarget}
-          submitClass={styles.submit}
-          policyLinkClass={styles.policy}
         >
           <Field 
             type="text" 
