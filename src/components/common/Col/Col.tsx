@@ -8,7 +8,7 @@ interface ColProps {
   reactKey?: number;
 }
 
-export default class Col extends React.Component<ColProps> {
+export class Col extends React.Component<ColProps> {
   getClass(): string {
     const { p, t, s, className } = this.props;
     return `${p ? `col${p}p` : ''} ${t ? `col${t}t` : ''} ${s ? `col${s}s` : ''} ${className || ''}`.trim();
