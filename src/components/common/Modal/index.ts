@@ -1,5 +1,3 @@
-import CallbackModal from './CallbackModal';
-import Modal from './Modal';
-import SuccessRequestModal from './SuccessRequestModal';
-
-export { CallbackModal, Modal, SuccessRequestModal };
+export { CallbackModal } from './CallbackModal';
+export { Modal } from './Modal';
+export { SuccessRequestModal } from './SuccessRequestModal';

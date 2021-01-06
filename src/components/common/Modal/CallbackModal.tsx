@@ -1,6 +1,7 @@
 import { Form, Field, Modal } from 'components/common';
 import { Component, ChangeEvent } from 'react';
 import Utils from 'utils/utils';
+import styles from './CallbackModal.module.scss';
 
 interface CallbackModalProps {
   visible: boolean;
@@ -13,7 +14,7 @@ interface CallbackModalState {
   phone?: string;
 }
 
-export default class CallbackModal extends Component<CallbackModalProps, CallbackModalState> {
+export class CallbackModal extends Component<CallbackModalProps, CallbackModalState> {
   private onFieldChange = 
     (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>, field: keyof CallbackModalState) => 
       this.setState({ [field]: e?.target?.value });
@@ -36,13 +37,15 @@ export default class CallbackModal extends Component<CallbackModalProps, Callbac
   render(): JSX.Element {
     const { visible, onModalClose } = this.props;
     return (
-      <Modal visible={visible} onClose={onModalClose}>
+      <Modal visible={visible} onClose={onModalClose} width={550}>
         <Form 
           submitLabel="Оставить заявку" 
           desc={<><b>Оставьте заявку</b> в форме ниже, и наш менеджер свяжется с вами в течение рабочего дня</>}
           formValue={this.getFormValue()}
           afterSuccessSubmit={this.onSubmit}
           formTarget={this.props.formTarget}
+          submitClass={styles.submit}
+          policyLinkClass={styles.policy}
         >
           <Field 
             type="text" 
