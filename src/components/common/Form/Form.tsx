@@ -15,6 +15,8 @@ interface FormProps {
   policyLinkClass?: string;
   policyLinkPosition?: 'beforeSubmit' | 'afterSubmit';
   formTarget?: string;
+  file?: File;
+  disabled?: boolean;
 }
 
 interface FormState {
@@ -22,7 +24,7 @@ interface FormState {
   isSuccessModalVisible: boolean;
 }
 
-export default class Form extends Component<FormProps, FormState> {
+export class Form extends Component<FormProps, FormState> {
   static defaultProps: Partial<FormProps> = {
     policyLinkPosition: 'afterSubmit',
   }
@@ -33,20 +35,26 @@ export default class Form extends Component<FormProps, FormState> {
     e.preventDefault();
     this.setState({ loading: true });
 
-    const { formValue, formTarget } = this.props;
+    const { formValue, formTarget, file } = this.props;
+    const data = new FormData();
 
-    const wholeFormValue = formTarget ? { ...formValue, 'Цель формы': formTarget } : formValue;
+    Object.entries(formValue).forEach(([key, value]) => {
+      data.append(key, value);
+    });
+
+    if (formTarget) {
+      data.append('Цель формы', formTarget);
+    }
+
+    if (file) {
+      data.append('file', file);
+    }
 
     fetch(
       '/mail/mail-callback.php', 
       { 
         method: 'POST', 
-        body: Object.keys(wholeFormValue)
-          .map(k => encodeURIComponent(k) + '=' + encodeURIComponent(wholeFormValue[k]))
-          .join('&'),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded', // отправляемые данные 
-        },
+        body: data,
       },
     )
       .finally(() => this.setState({ loading: false }))
@@ -98,7 +106,11 @@ export default class Form extends Component<FormProps, FormState> {
         <SuccessRequestModal visible={this.state.isSuccessModalVisible} />
 
         <form className={`${styles.Form} ${className || ''}`.trim()} onSubmit={this.onSubmit}>
-          <p className={`${styles.Form__desc} ${descClass || ''}`.trim()}>{desc}</p>
+          {
+            desc
+              ? <p className={`${styles.Form__desc} ${descClass || ''}`.trim()}>{desc}</p>
+              : null
+          }
 
           {children}
 
@@ -108,7 +120,7 @@ export default class Form extends Component<FormProps, FormState> {
             label={this.getSubmitLabel()} 
             type="submit" 
             className={`${styles.Form__submit} ${submitClass || ''}`.trim()} 
-            disabled={this.state.loading} 
+            disabled={this.state.loading || this.props.disabled} 
             bouncing={isSubmitBouncing}
           />
           
