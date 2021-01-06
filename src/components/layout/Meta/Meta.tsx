@@ -63,7 +63,6 @@ export function Meta() {
         )
       }
       <meta name="msapplication-TileImage" content="images/favicons/144.png" />
-      <meta name="yandex-verification" content="aa8147f4e34cbde3" />
     </>
   );
 }
