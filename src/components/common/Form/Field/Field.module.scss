@@ -1,15 +1,27 @@
-@import 'vars';
-@import 'mixins';
+@import 'component-vars';
 
 .Field {
-  border: none;
-  background: #EDEDED;
-  color: $color-fourth;
-  font-size: rem(27);
-  text-align: left;
-  padding: rem(12) rem(40);
-  border-radius: 27px;
+  @if $field-border == none {
+    border: none;
+
+    @if $field-bottom-border != none {
+      border-bottom: $field-bottom-border;
+    }
+  } @else {
+    border: none;
+  }
+
+  background: $field-background;
+  color: $field-text-color;
+  font-size: $field-font-size;
+  text-align: $field-text-align;
+  padding: $field-padding;
+  border-radius: $field-border-radius;
   display: inline-block;
   width: 100%;
-  margin-bottom: rem(18);
+  margin-bottom: $field-gap;
+
+  &::placeholder {
+    color: $field-placeholder-text-color;
+  }
 }

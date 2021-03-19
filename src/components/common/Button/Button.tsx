@@ -3,7 +3,7 @@ import styles from './Button.module.scss';
 import { scroller } from 'react-scroll';
 import { useRouter } from 'next/router';
 
-interface ButtonProps {
+export interface ButtonProps {
   type?: 'button' | 'submit';
   className?: string;
   onClick?: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
@@ -13,6 +13,7 @@ interface ButtonProps {
   anchor?: { target: string; speed?: number };
   preventDefault?: boolean;
   link?: string;
+  theme?: 'alt';
 }
 
 export const Button: FunctionComponent<ButtonProps> = (props: PropsWithChildren<ButtonProps>) => {
@@ -45,7 +46,7 @@ export const Button: FunctionComponent<ButtonProps> = (props: PropsWithChildren<
   };
 
   const getClass = (): string => {
-    const { className, disabled, bouncing } = props;
+    const { className, disabled, bouncing, theme } = props;
     return `${
       styles.Button
     } ${
@@ -54,6 +55,8 @@ export const Button: FunctionComponent<ButtonProps> = (props: PropsWithChildren<
       disabled ? styles.Button_disabled : ''
     } ${
       bouncing ? styles.Button_bouncing : ''
+    } ${
+      theme ? styles[`Button_${theme}`] : ''
     }`.trim();
   }
 

@@ -1,0 +1,38 @@
+@import 'mixins';
+
+// Basic links
+$link-color: $color-primary;
+
+// Logo
+$logo-background: url('/images/logo.svg') center center no-repeat;
+$logo-width: 148px;
+$logo-height: 42px;
+
+// Sections and columns
+$cont-max-width: 1170px;
+$section-vertical-padding: rem(80);
+
+$section-title-font-size: rem(30);
+$section-title-font-weight: 700;
+$section-title-margin: rem(80);
+$section-title-text-color: $color-main;
+$section-title-text-align: left;
+
+// Button
+$button-background: #06394B;
+$button-padding: rem(18) rem(40);
+$button-font-size: 1rem;
+$button-font-weight: 400;
+$button-text-color: $color-back;
+
+// Fields of form
+$field-border: none;
+$field-bottom-border: 1px solid $color-back;
+$field-background: transparent;
+$field-text-color: $color-back;
+$field-font-size: rem(18);
+$field-text-align: left;
+$field-padding: rem(10) 0;
+$field-border-radius: 0;
+$field-gap: rem(40);
+$field-placeholder-text-color: $color-back;

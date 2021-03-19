@@ -13,7 +13,7 @@ interface FormProps {
   submitClass?: string;
   isSubmitBouncing?: boolean;
   policyLinkClass?: string;
-  policyLinkPosition?: 'beforeSubmit' | 'afterSubmit';
+  policyLinkPosition?: 'beforeSubmit' | 'afterSubmit' | 'none';
   formTarget?: string;
   file?: File;
   disabled?: boolean;

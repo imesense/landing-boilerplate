@@ -1,7 +1,7 @@
 // COLORS
-$color-main: #4D4D4D;
+$color-main: #000;
 $color-back: #fff;
-$color-primary: #ffb900;
+$color-primary: #3CC041;
 $color-secondary: #105def;
 $color-secondary-dark: darken($color-secondary, 5%);
 $color-secondary-darker: darken($color-secondary, 10%);
@@ -15,14 +15,3 @@ $font-family: 'Gilroy', 'Tahoma', 'Arial', sans-serif;
 $font-family-secondary: 'Gotham Pro', $font-family;
 $font-size: 18px;
 $font-weight: 400;
-
-// Basic links
-$link-color: $color-primary;
-
-// Logo
-$logo-background: url('/images/logo.png') center center no-repeat;
-$logo-width: 150px;
-$logo-height: 37px;
-
-// Sections and columns
-$cont-max-width: 1300px;

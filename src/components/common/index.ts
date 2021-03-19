@@ -10,9 +10,11 @@ export { Preloader } from './Preloader/Preloader';
 export { withRevealWrapper } from './RevealWrapper/RevealWrapper';
 export { RouteLink } from './RouteLink/RouteLink';
 export { Up } from './Up/Up';
+export { EmailLink } from './EmailLink/EmailLink';
 
 export * from './Form';
 export * from './Slider';
 export * from './Modal';
 export * from './Button';
 export * from './Policy';
+export * from './IconWithLabel/IconWithLabel';

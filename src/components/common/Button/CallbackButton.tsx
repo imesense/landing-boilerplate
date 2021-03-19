@@ -1,10 +1,8 @@
 import { Component } from 'react';
-import { Button } from './Button';
+import { Button, ButtonProps } from './Button';
 import { CallbackModal } from 'components/common/Modal';
 
-interface CallbackButtonProps {
-  className?: string;
-  bouncing?: boolean;
+interface CallbackButtonProps extends Pick<ButtonProps, 'className' | 'disabled' | 'bouncing' | 'theme'> {
   formTarget?: string;
 }
 
@@ -28,12 +26,12 @@ export class CallbackButton extends Component<CallbackButtonProps, CallbackButto
   }
 
   render(): JSX.Element {
-    const { className, children, bouncing, formTarget } = this.props;
+    const { children, formTarget, ...props } = this.props;
     return (
       <>
         <CallbackModal visible={this.state.isModalVisible} onModalClose={this.closeModal} formTarget={formTarget} />
 
-        <Button type="button" bouncing={bouncing} className={className} onClick={this.openModal}>
+        <Button {...props} type="button" onClick={this.openModal}>
           {children}
         </Button>
       </>

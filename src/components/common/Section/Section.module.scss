@@ -1,54 +1,26 @@
-@import 'vars';
-@import 'mixins';
+@import 'component-vars';
 
 .Section {
-  padding: rem(60) 10px;
+  padding: $section-vertical-padding 10px;
   text-align: center;
 
   &__cont {
-    max-width: 1220px;
+    max-width: $cont-max-width;
     margin: 0 auto;
   }
 
   &__title {
     font: {
-      size: rem(42);
-      weight: 400;
+      size: $section-title-font-size;
+      weight: $section-title-font-weight;
     }
-    margin-bottom: rem(30);
-    text-transform: uppercase;
-    color: #454545;
-    letter-spacing: 3px;
+    margin: 0 auto $section-title-margin;
+    color: $section-title-text-color;
+    text-align: $section-title-text-align;
+    max-width: $cont-max-width;
 
     @media (max-width: 470px) {
       font-size: rem(36);
-    }
-
-    &::after {
-      display: block;
-      width: 100%;
-      max-width: 132px;
-      height: 3px;
-      background: $color-secondary;
-      content: '';
-      margin: 15px auto 0;
-    }
-
-    b {
-      font-weight: 900;
-    }
-  }
-
-  &_alt {
-    background: url('/images/section-back-dark.jpg') repeat;
-    color: $color-third;
-
-    .Section__title {
-      color: $color-third;
-
-      &::after {
-        background: $color-third;
-      }
     }
   }
 }

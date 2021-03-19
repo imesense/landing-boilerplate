@@ -1,17 +1,19 @@
 {
   "name": "landing-boilerplate",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:export": "next build && next export",
+    "build:export": "next build && next export && node ./scripts/zip-sources.js",
     "start": "node ./scripts/start.js",
     "rebuild": "rm yarn.lock && rm -rf node_modules && yarn",
     "favicons": "node ./scripts/create-favicons.js"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.18.9",
+    "@types/brainhubeu__react-carousel": "^2.0.2",
+    "classnames": "^2.2.6",
     "lodash-es": "^4.17.15",
     "next": "9.4.4",
     "rc-dialog": "^8.0.1",
@@ -35,6 +37,7 @@
     "@types/react-paginate": "^6.2.1",
     "@types/scrollreveal": "0.0.6",
     "jimp": "^0.13.0",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "@types/classnames": "^2.2.11"
   }
 }

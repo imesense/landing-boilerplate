@@ -1,8 +1,9 @@
 @import 'vars';
+@import 'component-vars';
 
 html, body {
   font: $font-weight $font-size $font-family;
-  color: $color-fourth;
+  color: $color-main;
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;

@@ -1,5 +1,4 @@
-@import 'vars';
-@import 'mixins';
+@import 'component-vars';
 
 @keyframes bounce {
   0%   { transform: translateY(0); }
@@ -12,14 +11,13 @@
   display: inline-block;
   text-decoration: none;
   font: {
-    size: rem(24);
-    weight: 900;
+    size: $button-font-size;
+    weight: $button-font-weight;
   };
   text-transform: uppercase;
-  background: linear-gradient(135deg, #f1d57b, #e2a22c);
+  background: $button-background;
   line-height: 1;
-  color: #000;
-  padding: rem(30) rem(40);
+  padding: $button-padding;
   border-radius: 50em;
   text-align: center;
   max-width: 100%;
@@ -27,16 +25,12 @@
   transition: all 0.2s ease-in-out;
   border: none;
 
-  &:visited {
-    color: #000;
-  }
-
   &:hover {
     opacity: 0.85;
   }
 
-  &:active, &:focus, &:visited:focus {
-    color: #000;
+  &, &:visited, &:active, &:focus, &:visited:focus {
+    color: $button-text-color;
   }
 
   &_bouncing {
@@ -46,6 +40,15 @@
   }
 
   &_disabled {
-    background: transparentize($color: $color-primary, $amount: 0.5);
+    background: transparentize($color: $button-background, $amount: 0.5);
+  }
+
+  &_alt {
+    background: #3CC041;
+    box-shadow: 0 4px 9px rgba(6, 57, 75, 0.41);
+
+    &, &:visited, &:active, &:focus, &:visited:focus {
+      color: $color-main;
+    }
   }
 }
