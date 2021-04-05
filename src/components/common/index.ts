@@ -11,7 +11,7 @@ export { withRevealWrapper } from './RevealWrapper/RevealWrapper';
 export { RouteLink } from './RouteLink/RouteLink';
 export { Up } from './Up/Up';
 export { EmailLink } from './EmailLink/EmailLink';
-
+export { FlexRow } from './FlexRow/FlexRow';
 export * from './Form';
 export * from './Slider';
 export * from './Modal';
