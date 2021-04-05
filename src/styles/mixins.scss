@@ -3,3 +3,9 @@
 @function rem($current-font-size) {
   @return $current-font-size / ($font-size / 1px) * 1rem;
 }
+
+@mixin apply-link-color($color) {
+  &, &:visited, &:active, &:focus {
+    color: $color;
+  }
+}
