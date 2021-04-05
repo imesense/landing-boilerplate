@@ -1,3 +1,9 @@
+## 0.3.0 (2021-04-06)
+1. feat: Added possibility to use button (common component) as standard link.
+2. improve: Rewrited breadcrumbs from class to functional component.
+3. feat: Created component of flex row.
+4. feat: Created mixin for fast change of link colors. 
+
 ## 0.2.0 (2021-03-20)
 1. feat: Added checklist.
 2. feat: Added package "classnames" and type for "@brainhubeu/react-carousel".
