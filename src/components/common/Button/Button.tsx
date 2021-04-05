@@ -14,6 +14,8 @@ export interface ButtonProps {
   preventDefault?: boolean;
   link?: string;
   theme?: 'alt';
+  href?: string;
+  target?: '_blank';
 }
 
 export const Button: FunctionComponent<ButtonProps> = (props: PropsWithChildren<ButtonProps>) => {
@@ -61,9 +63,13 @@ export const Button: FunctionComponent<ButtonProps> = (props: PropsWithChildren<
   }
 
   const type = props.type || 'button';
-  const { children, label, disabled } = props;
+  const { children, label, disabled, href, target } = props;
 
   return type === 'button' 
-    ? <a className={getClass()} onClick={onClick}>{children}</a>
+    ? (
+        !!href
+          ? <a className={getClass()} href={href} target={target}>{children}</a>
+          : <a className={getClass()} onClick={onClick}>{children}</a>
+      )
     : <input type="submit" className={getClass()} value={label} disabled={disabled} />;
 }
