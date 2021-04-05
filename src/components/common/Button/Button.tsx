@@ -1,4 +1,4 @@
-import React, { FunctionComponent, PropsWithChildren } from 'react';
+import React, { FC, FunctionComponent, PropsWithChildren } from 'react';
 import styles from './Button.module.scss';
 import { scroller } from 'react-scroll';
 import { useRouter } from 'next/router';
@@ -18,7 +18,7 @@ export interface ButtonProps {
   target?: '_blank';
 }
 
-export const Button: FunctionComponent<ButtonProps> = (props: PropsWithChildren<ButtonProps>) => {
+export const Button: FC<ButtonProps> = props => {
   const router = useRouter();
   
   const onClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
