@@ -20,3 +20,4 @@ export * from './Policy';
 export * from './IconWithLabel/IconWithLabel';
 export { Dropdown } from './Dropdown/Dropdown';
 export { ResponsiveNav } from './ResponsiveNav/ResponsiveNav';
+export { ScrollLink } from './ScrollLink/ScrollLink';

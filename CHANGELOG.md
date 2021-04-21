@@ -6,6 +6,7 @@
 5. feat: Created common component `ResponsiveNav`.
 6. feat: Created hook for aggregate data for common component `Form`.
 7. fix: Prop `name` of common component `Field` is optional now.
+8. feat: Created common component `ScrollLink`.
 
 ## 0.3.0 (2021-04-06)
 1. feat: Added possibility to use button (common component) as standard link.
