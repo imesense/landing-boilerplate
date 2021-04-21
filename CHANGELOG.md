@@ -11,6 +11,7 @@
 10. feat: Added mixin with media query for retina displays.
 11. improve: Added SCSS var for font weight of field (common component `Field`).
 11. improve: Added type `date` to common component `Field`.
+12. feat: Created common component `Slider`.
 
 ## 0.3.0 (2021-04-06)
 1. feat: Added possibility to use button (common component) as standard link.

@@ -12,8 +12,7 @@
     "https-htaccess": "node ./scripts/add-htaccess-with-https-redirect.js"
   },
   "dependencies": {
-    "@brainhubeu/react-carousel": "^1.18.9",
-    "@types/brainhubeu__react-carousel": "^2.0.2",
+    "@brainhubeu/react-carousel": "^2.0.2",
     "classnames": "^2.2.6",
     "lodash-es": "^4.17.15",
     "next": "9.4.4",
@@ -37,6 +36,7 @@
     "@types/react-input-mask": "^2.0.5",
     "@types/react-paginate": "^6.2.1",
     "@types/scrollreveal": "0.0.6",
+    "@types/brainhubeu__react-carousel": "^2.0.2",
     "jimp": "^0.13.0",
     "typescript": "^3.9.5",
     "@types/classnames": "^2.2.11"

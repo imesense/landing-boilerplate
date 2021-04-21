@@ -1,0 +1,31 @@
+@import 'mixins';
+
+.root {
+  width: rem(30);
+  height: rem(30);
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+  background: center center no-repeat;
+  background-size: contain;
+
+  @media (max-width: 850px) {
+    width: rem(45);
+    height: rem(45);
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  @each $direction in prev, next {
+    &_#{$direction} {
+      background-image: url('/images/arrow-#{$direction}.svg');
+    }
+  }
+
+  &_disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+}

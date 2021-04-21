@@ -1,0 +1,16 @@
+.root {
+  position: relative;
+}
+
+.arrow {
+  position: absolute;
+  top: 47%;
+
+  &_prev {
+    left: -30px;
+  }
+
+  &_next {
+    right: -30px;
+  }
+}
