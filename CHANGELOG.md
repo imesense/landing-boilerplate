@@ -1,3 +1,7 @@
+## 0.4.0 (2021-04-22)
+1. feat: Added script to generate .htaccess file with redirect to HTTPS.
+2. feat: Added mixins to create CSS triangles.
+
 ## 0.3.0 (2021-04-06)
 1. feat: Added possibility to use button (common component) as standard link.
 2. improve: Rewrited breadcrumbs from class to functional component.
@@ -16,3 +20,6 @@
 9. feat: Added possibility to hide link to policy in forms.
 10. feat: Created component "Icon with label".
 11. feat: Created script to zip sources and added as part of export build.
+
+## 0.1.0
+1. Repository created.

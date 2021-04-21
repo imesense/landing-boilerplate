@@ -2,7 +2,7 @@
 
 Landing boilerplate for fast builds of landing pages and simple sites with reusable parts based on Next.js, Typescript and Sass
 
-## Current version - 0.3.0
+## Current version - 0.4.0
 
 ## Recommendations
 
@@ -32,3 +32,4 @@ Landing boilerplate for fast builds of landing pages and simple sites with reusa
 - `yarn start` - Start production server (for server-side rendering sites).
 - `yarn rebuild` - Rebuild all dependencies.
 - `yarn favicons` - Create favicons of all sizes (before use script place original favicon with size 192 and larger in `./public/images/favicons/base.png`).
+- `yarn https-htaccess {domain}` - Create .htaccess file for redirect to HTTPS of domain.

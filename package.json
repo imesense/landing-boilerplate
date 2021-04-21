@@ -1,6 +1,6 @@
 {
   "name": "landing-boilerplate",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,7 +8,8 @@
     "build:export": "next build && next export && node ./scripts/zip-sources.js",
     "start": "node ./scripts/start.js",
     "rebuild": "rm yarn.lock && rm -rf node_modules && yarn",
-    "favicons": "node ./scripts/create-favicons.js"
+    "favicons": "node ./scripts/create-favicons.js",
+    "https-htaccess": "node ./scripts/add-htaccess-with-https-redirect.js"
   },
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.18.9",
