@@ -17,6 +17,7 @@ interface FormProps {
   formTarget?: string;
   file?: File;
   disabled?: boolean;
+  policyLinkText?: string;
 }
 
 interface FormState {
@@ -97,9 +98,14 @@ export class Form extends Component<FormProps, FormState> {
       isSubmitBouncing, 
       policyLinkClass,
       policyLinkPosition,
+      policyLinkText,
     } = this.props;
 
-    const policyLink = <PolicyLink className={`${styles['Form__policy-link']} ${policyLinkClass || ''}`.trim()} />;
+    const policyLink = (
+      <PolicyLink className={`${styles['Form__policy-link']} ${policyLinkClass || ''}`.trim()}>
+        {policyLinkText}
+      </PolicyLink>
+    );
 
     return(
       <>

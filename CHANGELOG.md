@@ -1,6 +1,7 @@
 ## 0.4.0 (2021-04-22)
 1. feat: Added script to generate .htaccess file with redirect to HTTPS.
 2. feat: Added mixins to create CSS triangles.
+3. feat: Added prop of policy link text in common component `Form`.
 
 ## 0.3.0 (2021-04-06)
 1. feat: Added possibility to use button (common component) as standard link.
