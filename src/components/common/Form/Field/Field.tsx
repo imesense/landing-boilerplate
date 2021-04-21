@@ -3,7 +3,7 @@ import { ChangeEvent } from 'react';
 import InputMask from 'react-input-mask';
 
 interface FieldProps {
-  type: 'text' | 'phone' | 'area' | 'email';
+  type: 'text' | 'phone' | 'area' | 'email' | 'date';
   placeholder: string;
   name?: string;
   className?: string;
@@ -23,7 +23,7 @@ export const Field = ({ type, placeholder, name, className, rows, value, onChang
   };
 
   switch (type) {
-    case 'text': case 'email':
+    case 'text': case 'email': case 'date':
       return <input type={type} {...restProps} />;
     case 'area':
       return <textarea rows={rows} {...restProps}></textarea>;
