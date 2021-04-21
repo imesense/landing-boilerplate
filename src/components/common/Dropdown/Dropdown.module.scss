@@ -1,0 +1,19 @@
+@import 'mixins';
+
+.anchor {
+  cursor: pointer;
+}
+
+.content {
+  background: $color-back;
+  padding: rem(10);
+  border-radius: 5px;
+  position: absolute;
+  display: none;
+  z-index: 50;
+  margin-top: rem(15);
+
+  &_visible {
+    display: block;
+  }
+}

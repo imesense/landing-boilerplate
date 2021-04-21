@@ -18,3 +18,4 @@ export * from './Modal';
 export * from './Button';
 export * from './Policy';
 export * from './IconWithLabel/IconWithLabel';
+export { Dropdown } from './Dropdown/Dropdown';
