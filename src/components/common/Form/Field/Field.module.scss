@@ -13,7 +13,10 @@
 
   background: $field-background;
   color: $field-text-color;
-  font-size: $field-font-size;
+  font: {
+    size: $field-font-size;
+    weight: $field-font-weight;
+  };
   text-align: $field-text-align;
   padding: $field-padding;
   border-radius: $field-border-radius;
