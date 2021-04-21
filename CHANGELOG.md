@@ -4,6 +4,7 @@
 3. feat: Added prop of policy link text in common component `Form`.
 4. feat: Created common component `Dropdown`.
 5. feat: Created common component `ResponsiveNav`.
+6. feat: Created hook for aggregate data for common component `Form`.
 
 ## 0.3.0 (2021-04-06)
 1. feat: Added possibility to use button (common component) as standard link.
