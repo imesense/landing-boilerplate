@@ -8,6 +8,7 @@
 7. fix: Prop `name` of common component `Field` is optional now.
 8. feat: Created common component `ScrollLink`.
 9. feat: Created common component `RawJs`.
+10. feat: Added mixin with media query for retina displays.
 
 ## 0.3.0 (2021-04-06)
 1. feat: Added possibility to use button (common component) as standard link.
