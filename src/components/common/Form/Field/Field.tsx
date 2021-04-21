@@ -5,7 +5,7 @@ import InputMask from 'react-input-mask';
 interface FieldProps {
   type: 'text' | 'phone' | 'area' | 'email';
   placeholder: string;
-  name: string;
+  name?: string;
   className?: string;
   rows?: number;
   value?: string;
