@@ -14,7 +14,7 @@
   "dependencies": {
     "@brainhubeu/react-carousel": "^2.0.2",
     "classnames": "^2.2.6",
-    "lodash-es": "^4.17.15",
+    "lodash-es": "^4.17.21",
     "next": "9.4.4",
     "rc-dialog": "^8.0.1",
     "rc-upload": "^3.3.1",

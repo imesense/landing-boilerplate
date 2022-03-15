@@ -1010,10 +1010,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@brainhubeu/react-carousel@^1.18.9":
-  version "1.19.22"
-  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-1.19.22.tgz#cb846b1d1e04463723b662b616206d5875c02053"
-  integrity sha512-a5QY1Fh/nwL7EPDMylUr23yZmcEQfLBCHrgGI+K5UbSd5c5x+xAzBgw6pMXaQ2FAUU7dONDuWxWH9QzWzs1KHQ==
+"@brainhubeu/react-carousel@^2.0.2":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@brainhubeu/react-carousel/-/react-carousel-2.0.4.tgz#9b3d3e9699fca1617530e4cd242d6ef99a671917"
+  integrity sha512-FeN4IL0xg2Ld2YC7zk2asnIbECfsaV9ryiHE3KaDRy3VRPKhAdwAcsrUR4u0lzFMghzGIwtrnIfMnYjczwjAdg==
 
 "@jimp/bmp@^0.13.0":
   version "0.13.0"
@@ -3827,10 +3827,10 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
-lodash-es@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
-  integrity sha512-rlrc3yU3+JNOpZ9zj5pQtxnx2THmvRykwL4Xlxoa8I9lHBlVbbyPhgyPMioxVZ4NqyxaVVtaJnzsyOidQIhyyQ==
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.memoize@^4.1.2:
   version "4.1.2"
